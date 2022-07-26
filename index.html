@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="assets/css/all.min.css" />
     <!-- Fender All Elements  -->
     <link rel="stylesheet" href="assets/css/normalize.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
@@ -25,7 +30,7 @@
     <!-- End => Preloader -->
 
     <!-- Start => Header -->
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <nav class="nav">
           <a href="index.html" class="logo">
@@ -49,32 +54,61 @@
     <main class="main">
       <div class="container">
         <div class="main-text">
-          <h3 class="main-head">Liberty NFT Market</h3>
+          <h4 class="main-head">Liberty NFT Market</h4>
           <h2 class="main-title">CREATE, SELL & COLLECT TOP NFT’S.</h2>
-          <p class="main-par">Liberty NFT Market is a really cool and professional design for your NFT websites. This HTML CSS template is based on Bootstrap v5 and it is designed for NFT related web portals. Liberty can be freely downloaded from TemplateMo's free css templates.</p>
+          <p class="main-par">
+            Liberty NFT Market is a really cool and professional design for your
+            NFT websites. This HTML CSS template is based on Bootstrap v5 and it
+            is designed for NFT related web portals. Liberty can be freely
+            downloaded from TemplateMo's free css templates.
+          </p>
           <div class="main-buts">
             <a href="#" class="main-but-one">Explore Top NFTs</a>
             <a href="#" class="main-but-two">Watch Our Videos</a>
           </div>
         </div>
         <div class="main-slides">
-          <div class="slides-imgs">
-            <div class="slide-l"><img src="assets/images/current-01.jpg" alt=""></div>
-            <div class="slide-r"><img src="assets/images/current-02.jpg" alt=""></div>
-
-          </div>
-          <div class="slides-buts">
-            <button class="but-l"></button>
-            <button class="but-r"></button>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/images/banner-01.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/banner-02.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- <div class="swiper-pagination"></div> -->
           </div>
         </div>
       </div>
     </main>
     <!-- End => Main -->
-    <!-- Start => Preloader -->
-    <!-- End => Preloader -->
-    <div class="scro"></div>
+    <!-- <div class="scro"></div> -->
     <!-- Main JS File -->
     <script src="assets/js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 2000,
+        },
+      });
+    </script>
   </body>
 </html>
