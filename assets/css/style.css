@@ -85,6 +85,73 @@ ul {
     width: 1250px;
   }
 }
+.general-buts .gen-but {
+  display: inline-block;
+  font-size: 13;
+  background-color: var(--but-color);
+  color: var(--f-color);
+  padding: 13px 30px;
+  border: 1px solid #7453fc;
+  border-radius: var(--boder-rad);
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: 0.3s;
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+.general-buts .gen-but:first-child {
+  background-color: transparent;
+}
+.general-buts .gen-but:first-child:hover {
+  background-color: var(--but-color);
+}
+.general-buts .gen-but:last-child {
+  background-color: var(--but-color);
+}
+.general-buts .gen-but:last-child:hover {
+  background-color: var(--f-color);
+  color: var(--but-color);
+}
+.general-buts .gen-but::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 80%;
+  background-color: var(--f-color);
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+.gen-head {
+  font-size: 26px;
+  font-weight: 700;
+  padding-top: 35px;
+  padding-bottom: 25px;
+  text-transform: capitalize;
+  color: var(--f-color);
+  position: relative;
+  text-align: center;
+  line-height: 1.7;
+}
+.gen-head span {
+  color: var(--but-color);
+}
+.gen-head::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 100px;
+  height: 2px;
+  background-color: #7453fc;
+  transform: translateX(-50%);
+}
+@media (min-width: 768px) {
+  .gen-head {
+    font-size: 30px;
+  }
+}
 /* End classes */
 /* Start Header */
 .header {
@@ -246,7 +313,7 @@ ul {
   padding-bottom: 40px;
 }
 .main .container {
-  padding-top: 35vh;
+  padding-top: 40vh;
 }
 .main .main-text {
   color: var(--f-color);
@@ -257,7 +324,7 @@ ul {
   margin-bottom: 15px;
 }
 .main .main-text .main-title {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.7;
   text-transform: uppercase;
@@ -267,44 +334,6 @@ ul {
   font-size: 17px;
   line-height: 2;
   margin-bottom: 30px;
-}
-.main .main-buts a {
-  display: inline-block;
-  font-size: 14;
-  background-color: var(--but-color);
-  color: var(--f-color);
-  padding: 13px 30px;
-  border: 1px solid #7453fc;
-  border-radius: var(--boder-rad);
-  font-weight: 500;
-  text-transform: capitalize;
-  transition: 0.3s;
-  position: relative;
-  margin-right: 10px;
-  margin-bottom: 15px;
-}
-.main .main-buts a.main-but-one {
-  background-color: transparent;
-}
-.main .main-buts .main-but-one:hover {
-  background-color: var(--but-color);
-}
-.main .main-buts .main-but-one {
-  background-color: var(--but-color);
-}
-.main .main-buts .main-but-two:hover {
-  background-color: var(--f-color);
-  color: var(--but-color);
-}
-.main .main-buts a:after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 80%;
-  background-color: var(--f-color);
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
 }
 .main .main-slides {
   width: 80%;
@@ -348,11 +377,12 @@ ul {
   width: 40px;
   height: 40px;
   left: 50%;
-  transform: translateX(80%);
 }
 .main .main-slides .swiper-button-next {
-  right: 50%;
-  transform: translateX(-80%);
+  transform: translateX(calc(-50% + 30px));
+}
+.main .main-slides .swiper-button-prev {
+  transform: translateX(calc(-50% - 30px));
 }
 .main .main-slides .swiper-button-next::after,
 .main .main-slides .swiper-button-prev::after {
@@ -373,7 +403,7 @@ ul {
     font-size: 20px;
   }
   .main .main-text .main-title {
-    font-size: 40px;
+    font-size: 45px;
   }
   .main .main-slides {
     width: 40%;
@@ -381,9 +411,296 @@ ul {
   }
 }
 /* End Main */
+/* Start Categories */
+.bg-dark {
+  background-image: url(../images/dark-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0px 100px 0px;
+  /* position: relative; */
+}
+.categories .categories-boxs {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.categories .categories-boxs .box-item {
+  background-color: var(--box-color);
+  border: 1px solid var(--border-box-color);
+  text-align: center;
+  padding: 25px 25px 30px;
+  border-radius: 20px;
+  position: relative;
+  margin: 20px;
+}
+.categories .categories-boxs .box-item .item-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--f-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+.categories .categories-boxs .box-item .item-icon img {
+  max-width: 30px;
+}
+
+.categories .categories-boxs .box-head {
+  font-size: 20px;
+  color: var(--f-color);
+  line-height: 1.5;
+  font-weight: 700;
+}
+.categories .categories-boxs .box-but {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background-color: var(--f-color);
+  color: var(--but-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.categories .categories-boxs .box-item:hover .box-but,
+.categories .categories-boxs .box-item .box-but:hover {
+  opacity: 1;
+  visibility: visible;
+}
+.categories .categories-boxs .box-item .box-but:hover {
+  color: var(--f-color);
+  background-color: var(--but-color);
+}
+@media (min-width: 575px) {
+  .categories .categories-boxs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+  }
+}
+@media (min-width: 992px) {
+  .categories .categories-boxs {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .categories .categories-boxs .box-item {
+    margin: 0;
+  }
+}
+/* End Categories */
+/* Start Collection */
+.collections {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.collections .swiper {
+  padding-right: 23px;
+  padding-left: 23px;
+}
+.collections .swiper-slide {
+  border-radius: var(--boder-rad);
+  background-color: var(--box-color);
+  border: 1px solid var(--border-box-color);
+  position: relative;
+  margin-bottom: 40px;
+  /* max-width: 28px; */
+}
+.collections .coll-img {
+  overflow: hidden;
+  border-top-left-radius: var(--boder-rad);
+  border-top-right-radius: var(--boder-rad);
+}
+.collections .coll-text {
+  padding: 30px 25px 45px;
+}
+.collections .coll-head {
+  font-size: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 25px;
+  text-align: center;
+  color: var(--f-color);
+}
+.collections .coll-pars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--f-color);
+  line-height: 1.8;
+}
+.collections .coll-pars p {
+  font-size: 14px;
+}
+.collections .coll-pars p:first-child {
+  margin-right: 10px;
+}
+.collections .coll-pars p:last-child {
+  text-align: right;
+}
+.collections .coll-pars strong {
+  font-size: 18px;
+  font-weight: 700;
+}
+.collections .general-buts {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.collections .general-buts .gen-but {
+  min-width: 170px;
+  padding: 13px 0;
+  text-align: center;
+}
+.collections .swiper-button-next,
+.collections .swiper-button-prev {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background-color: var(--f-color);
+  color: var(--but-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.collections .swiper-button-next {
+  right: 0;
+}
+.collections .swiper-button-prev {
+  left: 0;
+}
+.collections .swiper-button-next::after,
+.collections .swiper-button-prev::after {
+  display: none;
+}
+/* End Collection */
+/* Start NFT */
+.nft {
+  background-image: url(../images/main-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px 0px;
+  position: relative;
+}
+.nft .nft-gen  {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nft .gen-head::before {
+  background-color: var(--f-color);
+}
+.nft .general-buts {
+  margin: 10px auto;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.nft .general-buts .gen-but::after {
+  height: 2px;
+}
+.nft .nft-item {
+  text-align: center;
+  margin-top: 40px;
+  color: var(--f-color);
+  line-height: 1.8;
+  padding: 5px;
+  position: relative;
+}
+.nft .nft-item .nft-icon {
+  width: 60px;
+  height: 60px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--f-color);
+  border-radius: 50%;
+}
+.nft .nft-item .nft-icon img {
+  width: 32px;
+}
+.nft .nft-item .nft-head {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.nft .nft-item .nft-par {
+  font-size: 16px;
+}
+.nft .nft-item .nft-par a{
+  color: #3CF;
+  font-size: 15px;
+}
+@media (min-width: 992px) {
+  .nft .nft-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .nft .nft-item {
+    text-align: left;
+  }
+  .nft .nft-item .nft-icon{
+    margin-left: 0;
+  }
+  .nft .nft-item:not(:last-child):before{
+    content: "1";
+    position: absolute;
+    top: 0;
+    right: -23px;
+    padding: 5px;
+  }
+  .nft .nft-item:nth-child(2):before{
+    content: "2";
+  }
+  .nft .nft-item:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -13px;
+    width: 1px;
+    height: calc(100% - 40px);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .nft .general-buts {
+    margin: 0;
+  }
+}
+/* End NFT */
 /* Start Home */
 /* End Home */
 .scro {
   height: 3000px;
   background-color: wheat;
+}
+
+/* Footer */
+
+/* footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  background-color: var(--but-color);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.copyright {
+  margin: auto;
+  padding: 30px 5px;
+  color: var(--f-color);
 }

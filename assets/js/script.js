@@ -39,3 +39,5 @@ linkPages.forEach((e, index) => {
     removeClass(linkPages, "active", index)
   })
 })
+
+
