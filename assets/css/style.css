@@ -118,7 +118,7 @@ ul {
   content: "";
   position: absolute;
   height: 1px;
-  width: 80%;
+  width: 75%;
   background-color: var(--f-color);
   left: 50%;
   bottom: 0;
@@ -638,12 +638,12 @@ ul {
 .nft .nft-item .nft-par {
   font-size: 16px;
 }
-.nft .nft-item .nft-par a{
-  color: #3CF;
+.nft .nft-item .nft-par a {
+  color: #3cf;
   font-size: 15px;
 }
 @media (min-width: 992px) {
-  .nft .nft-gen  {
+  .nft .nft-gen {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -660,20 +660,20 @@ ul {
   .nft .nft-item {
     text-align: left;
   }
-  .nft .nft-item .nft-icon{
+  .nft .nft-item .nft-icon {
     margin-left: 0;
   }
-  .nft .nft-item:not(:last-child):before{
+  .nft .nft-item:not(:last-child):before {
     content: "1";
     position: absolute;
     top: 0;
     right: -23px;
     padding: 5px;
   }
-  .nft .nft-item:nth-child(2):before{
+  .nft .nft-item:nth-child(2):before {
     content: "2";
   }
-  .nft .nft-item:not(:last-child)::after{
+  .nft .nft-item:not(:last-child)::after {
     content: "";
     position: absolute;
     top: 40px;
@@ -687,22 +687,6 @@ ul {
   }
 }
 /* End NFT */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Explore Page */
 
@@ -730,7 +714,7 @@ ul {
 .create .create-par {
   margin-bottom: 20px;
 }
-.create .create-par a{
+.create .create-par a {
   color: #8a75da;
 }
 @media (min-width: 992px) {
@@ -740,9 +724,7 @@ ul {
   .create .create-head {
     font-size: 40px;
   }
-  
 }
-
 
 /* Start Details */
 .details-dark {
@@ -758,7 +740,7 @@ ul {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.details-show .img-show{
+.details-show .img-show {
   border-radius: var(--boder-rad);
   overflow: hidden;
   margin-top: 30px;
@@ -779,7 +761,7 @@ ul {
   line-height: 1.6;
   font-weight: 500;
 }
-.show-content .user-img  img {
+.show-content .user-img img {
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -810,10 +792,10 @@ ul {
   font-size: 18px;
   font-weight: 600;
 }
-.show-content .show-owner span{
+.show-content .show-owner span {
   color: var(--span-color);
 }
-.show-content .show-form form{
+.show-content .show-form form {
   display: flex;
   align-items: center;
   margin-top: 30px;
@@ -834,7 +816,7 @@ ul {
   padding: 5px;
   border: 1px solid var(--but-color);
 }
-.show-content .show-form [type="submit"]{
+.show-content .show-form [type="submit"] {
   margin: 0;
 }
 @media (min-width: 992px) {
@@ -844,21 +826,15 @@ ul {
     gap: 40px;
     align-items: flex-start;
   }
-  .details-show .img-show{
+  .details-show .img-show {
     margin-top: 0;
   }
 }
 /* End Details */
 
-
-
-
 /* Muhamad */
 
 /* --------------------- */
-
-
-
 
 /* inputs */
 /* 
@@ -869,10 +845,10 @@ ul {
   padding: 120px 0px 120px 0px;
 } */
 
-.inputs_container{
+.inputs_container {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-between;
+  justify-content: space-between;
   margin-top: 50px;
   text-align: left;
   background-color: #37393c;
@@ -887,7 +863,11 @@ ul {
   font-size: 15px;
 }
 
-.title,.desc,.username,.Price,.Royalties{
+.title,
+.desc,
+.username,
+.Price,
+.Royalties {
   width: 100%;
   height: 46px;
   text-align: left;
@@ -902,37 +882,37 @@ ul {
   margin-top: 10px;
 }
 
-.input1{
+.input1 {
   width: 30%;
   padding-top: 10px;
 }
 
-.input2{
+.input2 {
   width: 48%;
 }
-.input3 label{
+.input3 label {
   font-size: 20px;
 }
 
 .input3 input {
   padding-top: 5px;
 }
-.submit_btn{
+.submit_btn {
   position: relative;
 }
 
-.file{
+.file {
   width: 100%;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-.inputs_container button{
+.inputs_container button {
   width: 500px;
   height: 46px;
   margin-top: 15px;
   border-radius: 50px;
-  background-color: #7453fc;;
+  background-color: #7453fc;
   border: 0px;
   color: white;
 }
@@ -946,34 +926,234 @@ ul {
   margin: 0;
 }
 
-@media only screen and (max-width: 1010px){
-  .inputs_container button{
-    width:200px
+@media only screen and (max-width: 1010px) {
+  .inputs_container button {
+    width: 200px;
   }
 }
 
-@media only screen and (max-width: 710px){
-.inputs_container{
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin: 50px auto 80px;
-
+@media only screen and (max-width: 710px) {
+  .inputs_container {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 50px auto 80px;
+  }
+  .input1,
+  .input2 {
+    width: auto;
+  }
 }
-.input1,.input2{
-  width: auto;
-}
-} 
 
 /* --------------------------------------------------------- */
 
+/* Start Followers */
 
+.followers {
+  background-image: url(../images/dark-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 100px 0px 120px 0px;
+  position: relative;
+}
 
+.follower .follower-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.follower .follower-img .img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-right: 25px;
+  overflow: hidden;
+}
+.follower .follower-img h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--f-color);
+  line-height: 1.7;
+}
+.follower .follower-img h3 span {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--but-color);
+  font-weight: 500;
+}
+.follower .follower-box {
+  padding: 20px 20px;
+  background-color: var(--box-color);
+  border: 1px solid var(--border-box-color);
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+.follower .follower-box .flex-foll {
+  /* padding: 10px 20px; */
+  color: var(--but-color);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
 
+.follower .follower-box .flex-foll div {
+  font-size: 17px;
+  font-weight: 500;
+}
+.follower .follower-box .flex-foll div i {
+  font-size: 22px;
+}
+.follower .follower-box .flex-foll div span {
+  color: var(--f-color);
+}
 
+.follower .num-foll {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+.follower .num-foll span {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--span-color);
+  display: block;
+  margin-right: 15px;
+}
+.follower .num-foll .general-buts {
+  flex-grow: 1;
+}
+.follower .num-foll .general-buts a {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .follower {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .follower .follower-img {
+    margin-bottom: 0;
+  }
+  .follower .follower-box {
+    margin: 0;
+    min-width: 400px;
+    padding: 20px 30px;
+  }
+}
 
+/* End Followers */
 
+/* Start Gallery */
+.gallery {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.gallery .gen-head {
+  text-align: left;
+  padding-top: 40px;
+}
+.gallery .gen-head::before {
+  left: 0;
+  transform: translateX(0);
+}
 
+.gallery .gallery-grid {
+  margin-top: 30px;
+  display: grid;
+  gap: 50px 30px;
+}
+
+.gallery .gallery-box {
+  padding: 45px 25px;
+  background-color: var(--box-color);
+  border: 1px solid var(--border-box-color);
+  border-radius: var(--boder-rad);
+  position: relative;
+  /* margin-bottom: 20px; */
+}
+
+.gallery .gallery-box .gallery-img {
+  position: relative;
+}
+.gallery .gallery-box .gallery-img > img {
+  border-radius: var(--boder-rad);
+}
+.gallery .gallery-box .gallery-img span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.gallery .gallery-box .gallery-head {
+  font-size: 25px;
+  color: var(--f-color);
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+.gallery .gallery-box hr {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+}
+.gallery .gallery-box .gallery-text {
+  color: var(--f-color);
+  display: flex;
+  line-height: 1.8;
+  align-items: center;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+
+.gallery .gallery-box .gallery-text span {
+  font-size: 15px;
+  padding-right: 15px;
+}
+
+.gallery .gallery-box .gallery-text span strong {
+  font-size: 18px;
+}
+
+.gallery-box .general-buts {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.gallery-box .general-buts a {
+  padding: 0;
+  min-width: 150px;
+  text-align: center;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* End Gallery */
 
 /* Start Footer */
 .footer {
@@ -990,4 +1170,3 @@ ul {
   color: var(--f-color);
 }
 /* End Footer */
-
