@@ -96,7 +96,7 @@ ul {
   border-radius: var(--boder-rad);
   font-weight: 500;
   text-transform: capitalize;
-  transition: 0.3s;
+  transition: color 0.3s, background-color 0.3s;
   position: relative;
   margin-right: 10px;
   margin-bottom: 15px;
@@ -145,7 +145,7 @@ ul {
   left: 50%;
   width: 100px;
   height: 2px;
-  background-color: #7453fc;
+  background-color: var(--but-color);
   transform: translateX(-50%);
 }
 @media (min-width: 768px) {
@@ -696,9 +696,12 @@ ul {
   background-position: center center;
   background-repeat: no-repeat;
   padding-top: 250px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
   text-align: center;
   color: var(--f-color);
+}
+.create.explore-pad {
+  padding-bottom: 220px;
 }
 .create .create-title {
   font-size: 18px;
@@ -1143,12 +1146,12 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .gallery-grid {
+  .followers .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 992px) {
-  .gallery-grid {
+  .followers .gallery-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -1235,6 +1238,114 @@ ul {
   }
 }
 
+/* Start Eplore discover */
+
+.discover {
+  background-image: url(../images/dark-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 300px 0px 100px 0px;
+  position: relative;
+}
+
+.discover .form {
+  margin: 20px 0 60px;
+}
+.discover .form input,
+.discover .form select,
+.discover .form button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  margin: 20px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--boder-rad);
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+  color: var(--f-color);
+}
+.discover .form select option {
+  background-color: var(--box-color);
+}
+.discover .form button {
+  background-color: var(--but-color);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s, background-color 0.3s;
+  font-weight: 500;
+}
+.discover .form button:hover {
+  background-color: var(--f-color);
+  color: var(--but-color);
+}
+
+.discover .form button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 80%;
+  height: 2px;
+  background-color: var(--f-color);
+  transform: translateX(-50%);
+}
+
+.discover .gallery-double {
+  display: flex;
+  border-radius: var(--boder-rad);
+  background-color: var(--box-color);
+  position: relative;
+}
+.discover .gallery-double::before {
+  content: "Double Item";
+  color: var(--f-color);
+  background-color: var(--but-color);
+  font-size: 15px;
+  padding: 5px 15px;
+  position: absolute;
+  font-weight: 500;
+  left: 50%;
+  top: 0;
+  border-radius: 15px;
+  transform: translateX(-50%) translateY(-50%);
+}
+.discover .gallery-double .gallery-box-sec {
+  width: 50%;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+.discover .gallery-double .gallery-box-sec hr.double-hr {
+  width: calc(100% + 50px);
+}
+.discover .gallery-double .gallery-box-sec .general-buts {
+  left: 0;
+}
+@media (min-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery-double {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .discover-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .discover .form form {
+    display: flex;
+    justify-content: space-between;
+  }
+  .discover .form {
+    margin: 20px;
+  }
+}
+
+/* End Eplore discover */
 /* Start Footer */
 .footer {
   width: 100%;
