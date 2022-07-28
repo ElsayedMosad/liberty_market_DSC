@@ -7,17 +7,6 @@ window.addEventListener("scroll", () => {
     header.classList.remove("fixed-header");
   }
 });
-
-
-// Menu
-const menuLinks = document.querySelector(".menu")
-const toggle = document.querySelector(".toggle")
-
-toggle.addEventListener("click", () => {
-  menuLinks.classList.toggle("play-menu")
-  toggle.classList.toggle("play-toggle")
-})
-
 // Genral functions
 function removeClass(ArrayOfElements, classTargetToRemove, newIndexForClass) {
   ArrayOfElements.forEach((element, index) => {
@@ -30,14 +19,25 @@ function removeClass(ArrayOfElements, classTargetToRemove, newIndexForClass) {
   });
 }
 
+
+// Menu
+const menuLinks = document.querySelector(".menu");
+const toggle = document.querySelector(".toggle");
+
+toggle.addEventListener("click", () => {
+  menuLinks.classList.toggle("play-menu");
+  toggle.classList.toggle("play-toggle");
+});
+
+
 // Add active class to current page
 
-const linkPages = document.querySelectorAll(".menu .link")
-
-linkPages.forEach((e, index) => {
-  e.addEventListener("click", () => {
-    removeClass(linkPages, "active", index)
-  })
-})
-
-
+let pageNames = [
+  "/index.html",
+  "/explore.html",
+  "/details.html",
+  "/author.html",
+  "/create.html",
+];
+const linkPages = document.querySelectorAll(".menu .link");
+removeClass(linkPages, "active", pageNames.indexOf(window.location.pathname));

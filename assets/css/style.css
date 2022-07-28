@@ -5,6 +5,7 @@
   --but-color: #7453fc;
   --box-color: #282b2f;
   --border-box-color: #404245;
+  --span-color: #afafaf;
   /* Border Radius */
   --boder-rad: 25px;
 }
@@ -100,16 +101,16 @@ ul {
   margin-right: 10px;
   margin-bottom: 15px;
 }
-.general-buts .gen-but:first-child {
+.general-buts .gen-but.one {
   background-color: transparent;
 }
-.general-buts .gen-but:first-child:hover {
+.general-buts .gen-but.one:hover {
   background-color: var(--but-color);
 }
-.general-buts .gen-but:last-child {
+.general-buts .gen-but.two {
   background-color: var(--but-color);
 }
-.general-buts .gen-but:last-child:hover {
+.general-buts .gen-but.two:hover {
   background-color: var(--f-color);
   color: var(--but-color);
 }
@@ -596,11 +597,7 @@ ul {
   padding: 80px 0px;
   position: relative;
 }
-.nft .nft-gen  {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 .nft .gen-head::before {
   background-color: var(--f-color);
 }
@@ -646,6 +643,15 @@ ul {
   font-size: 15px;
 }
 @media (min-width: 992px) {
+  .nft .nft-gen  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nft .gen-head::before {
+    left: 0;
+    transform: translateX(0);
+  }
   .nft .nft-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -681,16 +687,295 @@ ul {
   }
 }
 /* End NFT */
-/* Start Home */
-/* End Home */
-.scro {
-  height: 3000px;
-  background-color: wheat;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Explore Page */
+
+.create {
+  background-image: url(../images/heading-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 250px;
+  padding-bottom: 100px;
+  text-align: center;
+  color: var(--f-color);
+}
+.create .create-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.create .create-head {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 500;
 }
 
-/* Footer */
+.create .create-par {
+  margin-bottom: 20px;
+}
+.create .create-par a{
+  color: #8a75da;
+}
+@media (min-width: 992px) {
+  .create .create-title {
+    font-size: 22px;
+  }
+  .create .create-head {
+    font-size: 40px;
+  }
+  
+}
 
-/* footer */
+
+/* Start Details */
+.details-dark {
+  background-image: url(../images/dark-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 100px 0px 100px 0px;
+  position: relative;
+}
+
+.details-show {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.details-show .img-show{
+  border-radius: var(--boder-rad);
+  overflow: hidden;
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+.show-content {
+  padding: 10px;
+  color: var(--f-color);
+}
+.show-content h5 {
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+.show-content .user-img {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.show-content .user-img  img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.show-content .user-img a {
+  color: var(--but-color);
+}
+.show-content .show-par {
+  font-size: 15px;
+  line-height: 1.8;
+  padding-right: 15px;
+  letter-spacing: 0.5px;
+}
+.show-content .show-owner {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.show-content .show-owner p {
+  line-height: 1.8;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.show-content .show-owner strong {
+  color: var(--but-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+.show-content .show-owner span{
+  color: var(--span-color);
+}
+.show-content .show-form form{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 20px 10px;
+}
+.show-content .show-form p {
+  color: var(--span-color);
+}
+.show-content .show-form [type="text"] {
+  width: 100px;
+  height: 45px;
+  outline: none;
+  border-radius: 23px;
+  color: var(--f-color);
+  text-align: center;
+  margin: 0 15px 0 15px;
+  padding: 5px;
+  border: 1px solid var(--but-color);
+}
+.show-content .show-form [type="submit"]{
+  margin: 0;
+}
+@media (min-width: 992px) {
+  .details-show {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: flex-start;
+  }
+  .details-show .img-show{
+    margin-top: 0;
+  }
+}
+/* End Details */
+
+
+
+
+/* Muhamad */
+
+/* --------------------- */
+
+
+
+
+/* inputs */
+/* 
+.inputs{
+  background-image: url(./images/dark-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0px 120px 0px;
+} */
+
+.inputs_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  margin-top: 50px;
+  text-align: left;
+  background-color: #37393c;
+  padding: 45px 15px;
+  border-radius: 15px;
+  color: var(--f-color);
+  font-size: smaller;
+  margin-bottom: 80px;
+}
+.inputs_container label {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.title,.desc,.username,.Price,.Royalties{
+  width: 100%;
+  height: 46px;
+  text-align: left;
+  padding: 5px 15px;
+  background-color: #282b2f;
+  border: 1px solid #404245;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: #afafaf;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.input1{
+  width: 30%;
+  padding-top: 10px;
+}
+
+.input2{
+  width: 48%;
+}
+.input3 label{
+  font-size: 20px;
+}
+
+.input3 input {
+  padding-top: 5px;
+}
+.submit_btn{
+  position: relative;
+}
+
+.file{
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.inputs_container button{
+  width: 500px;
+  height: 46px;
+  margin-top: 15px;
+  border-radius: 50px;
+  background-color: #7453fc;;
+  border: 0px;
+  color: white;
+}
+.inputs_container .general-buts {
+  flex-grow: 1;
+  margin-top: 10px;
+}
+.inputs_container .general-buts a {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1010px){
+  .inputs_container button{
+    width:200px
+  }
+}
+
+@media only screen and (max-width: 710px){
+.inputs_container{
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 50px auto 80px;
+
+}
+.input1,.input2{
+  width: auto;
+}
+} 
+
+/* --------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+/* Start Footer */
 .footer {
   width: 100%;
   text-align: center;
@@ -704,3 +989,5 @@ ul {
   padding: 30px 5px;
   color: var(--f-color);
 }
+/* End Footer */
+
