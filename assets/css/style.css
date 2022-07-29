@@ -1297,6 +1297,7 @@ ul {
   border-radius: var(--boder-rad);
   background-color: var(--box-color);
   position: relative;
+  max-width: 100%;
 }
 .discover .gallery-double::before {
   content: "Double Item";
@@ -1323,6 +1324,48 @@ ul {
 .discover .gallery-double .gallery-box-sec .general-buts {
   left: 0;
 }
+@media (max-width: 400px) {
+  .gallery .gallery-box {
+    padding: 45px 15px;
+  }
+  .gallery .gallery-box.gallery-box-sec {
+    padding: 45px 10px;
+  }
+
+  .gallery-double .gallery-head {
+    font-size: 20px;
+  }
+  .gallery-double .gallery-text span {
+    font-size: 12px;
+    padding-right: 10px;
+  }
+
+  .gallery-double .gallery-text span strong {
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-double {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .discover-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .discover .form form {
+    display: flex;
+    justify-content: space-between;
+  }
+  .discover .form {
+    margin: 20px;
+  }
+}
 @media (min-width: 992px) {
   .gallery-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -1344,8 +1387,59 @@ ul {
     margin: 20px;
   }
 }
-
 /* End Eplore discover */
+
+/* Start seller */
+
+.seller {
+  padding: 70px 0;
+  background: url(../images/main-bg.jpg);
+  color: var(--f-color);
+}
+.seller .gen-head::before {
+  background-color: var(--f-color);
+}
+.seller__info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.seller__box {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  min-width: 200px;
+  margin-bottom: 30px;
+}
+.seller__box img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+}
+
+.seller__number {
+  font-size: 20px;
+  font-weight: bold;
+}
+.seller__box div p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.seller__box a {
+  font-size: 14px;
+}
+@media (min-width: 560px) {
+  .seller__info {
+    justify-content: space-between;
+  }
+}
+
+/* End seller */
+
 /* Start Footer */
 .footer {
   width: 100%;
