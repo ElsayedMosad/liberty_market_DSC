@@ -19,7 +19,6 @@ function removeClass(ArrayOfElements, classTargetToRemove, newIndexForClass) {
   });
 }
 
-
 // Menu
 const menuLinks = document.querySelector(".menu");
 const toggle = document.querySelector(".toggle");
@@ -28,7 +27,6 @@ toggle.addEventListener("click", () => {
   menuLinks.classList.toggle("play-menu");
   toggle.classList.toggle("play-toggle");
 });
-
 
 // Add active class to current page
 
@@ -41,3 +39,26 @@ let pageNames = [
 ];
 const linkPages = document.querySelectorAll(".menu .link");
 removeClass(linkPages, "active", pageNames.indexOf(window.location.pathname));
+
+const btns = document.querySelectorAll(".market-btn");
+const marketItem = document.querySelectorAll(".market-item");
+
+btns.forEach((e, i) => {
+  e.addEventListener("click", (e) => {
+    e.preventDefault();
+    removeClass(btns, "active", i);
+
+    const filter = e.target.dataset.filter;
+    marketItem.forEach((product) => {
+      if (filter === "All-Items") {
+        product.style.display = "flex";
+      } else {
+        if (product.classList.contains(filter)) {
+          product.style.display = "flex";
+        } else {
+          product.style.display = "none";
+        }
+      }
+    });
+  });
+});
