@@ -30,15 +30,16 @@ toggle.addEventListener("click", () => {
 
 // Add active class to current page
 
-let pageNames = [
-  "/index.html",
-  "/explore.html",
-  "/details.html",
-  "/author.html",
-  "/create.html",
-];
+let pageNames = ["index", "plore", "tails", "uthor", "reate"];
 const linkPages = document.querySelectorAll(".menu .link");
-removeClass(linkPages, "active", pageNames.indexOf(window.location.pathname));
+
+console.log(location.pathname.slice(-10, -5));
+
+removeClass(
+  linkPages,
+  "active",
+  pageNames.indexOf(location.pathname.slice(-10, -5))
+);
 
 const btns = document.querySelectorAll(".market-btn");
 const marketItem = document.querySelectorAll(".market-item");
@@ -46,7 +47,7 @@ const marketItem = document.querySelectorAll(".market-item");
 btns.forEach((e, i) => {
   e.addEventListener("click", (e) => {
     e.preventDefault();
-    removeClass(btns, "active", i);
+    removeClass(btns, "search-active", i);
 
     const filter = e.target.dataset.filter;
     marketItem.forEach((product) => {

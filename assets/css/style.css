@@ -1586,7 +1586,7 @@ ul {
   font-size: 15px;
   font-weight: 500;
 }
-.market-nav a.active,
+.market-nav a.search-active,
 .market-nav a:hover {
   background-color: #7453fc;
   color: var(--f-color);
