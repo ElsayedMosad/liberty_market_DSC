@@ -33,7 +33,6 @@ toggle.addEventListener("click", () => {
 let pageNames = ["index", "plore", "tails", "uthor", "reate"];
 const linkPages = document.querySelectorAll(".menu .link");
 
-console.log(location.pathname.slice(-10, -5));
 
 removeClass(
   linkPages,
