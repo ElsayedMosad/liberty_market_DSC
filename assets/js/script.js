@@ -30,14 +30,19 @@ toggle.addEventListener("click", () => {
 
 // Add active class to current page
 
-let pageNames = ["index", "plore", "tails", "uthor", "reate"];
+// let pageNames = ["index", "plore", "tails", "uthor", "reate"];
 const linkPages = document.querySelectorAll(".menu .link");
 
-
+// console.log(parseInt(document.body.dataset.id))
+// removeClass(
+//   linkPages,
+//   "active",
+//   pageNames.indexOf(location.pathname.slice(-10, -5))
+// );
 removeClass(
   linkPages,
   "active",
-  pageNames.indexOf(location.pathname.slice(-10, -5))
+  parseInt(document.body.dataset.id)
 );
 
 const btns = document.querySelectorAll(".market-btn");
